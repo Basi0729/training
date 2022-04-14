@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Profile_create</title>
+    </head>
+    <body>
+       <h1>Create Profile...</h1>
+       <h2>Enter values</h2>
+
+      <table>
+        <tr>
+      <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{formset.as_p}}
+      </tr>
+    </table>
+        <br><br>
+        <input type="submit" value="Submit and Upload">
+     </form>
+   
+      <br> <br> <a href="/">Home</a>
+    </body>
+</html>

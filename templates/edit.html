@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Edit Profile</title>
+    </head>
+    <body>
+        <center>
+            <h1>Edit Details</h1>
+        </center>
+        <table>
+            <tr>
+        <form action="" method = "POST" enctype="multipart/form-data" >
+            {% csrf_token %}
+            {{ form }}
+        <br/>
+        </tr>
+    </table>
+            
+            <input type="submit" value="Edit and Save">
+        </form>
+    </body>
+</html>

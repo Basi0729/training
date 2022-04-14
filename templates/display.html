@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Display Profile</title>
+    </head>
+    <style>
+      table,th,td
+      {
+          border:1px solid black;
+          border-collapse: collapse;
+      }
+      th,td{
+          padding:10px;
+  
+      }
+  </style>
+    <body>
+        <center>
+            <h1>Display Details</h1>
+        </center>
+           {%if obj%}
+           <table>
+              <tr>
+              <td><img src="{{obj.profile_Main_Img.url}}"alt="image" style="max-height:80px"></td>
+            
+                  <td>{{obj.id}}</td>
+                  <td>{{obj.name}}</td>
+                  <td>{{obj.username}}</td>
+                  <td>{{obj.age}}</td>
+                  <td>{{obj.occupation}}</td>
+                  <td>{{obj.place}}</td>
+                  <td>{{obj.joining_date}}</td>
+                  <td>{{obj.email_id}}</td> 
+                  <td><a href={%url 'delete' id=obj.id %}>Delete</a>
+                      <a href={%url 'edit' id=obj.id %}>Edit</a>
+                    </td>
+                </tr>
+                  
+                  </table>
+                
+              {%endif%}
